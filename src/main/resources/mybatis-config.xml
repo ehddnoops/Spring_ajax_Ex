@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration> 
+<!-- DB 테이블과 컬럼들을 mapper 매핑을 위한 변수 선언-->
+	<properties>
+		<!-- 
+		* property
+		- name : mapper.xml에서 사용될 이름 
+		- value : DB 테이블 및 컬럼 이름
+		 -->
+		 <property name="test_board" value="test_board"/>
+		 <property name="bno" value="bno"/>
+		 <property name="title" value="title"/>
+		 <property name="content" value="content"/>
+		 <property name="userid" value="userid"/>
+		 <property name="cdate" value="cdate"/>
+		 
+		 <property name="test_reply" value="test_reply"></property>
+		 <property name="replyNo" value="reply_no"></property>
+		 <property name="replyBno" value="reply_bno"></property>
+		 <property name="replyContent" value="reply_content"></property>
+		 <property name="replyId" value="reply_id"></property>
+		 <property name="replyDate" value="reply_date"></property>
+	</properties>
+	 <!-- Underscore 명명법을 Camel 명명법으로 매핑 -->
+	 <settings>
+	 	<setting name="mapUnderscoreToCamelCase" value="true"/>
+	 </settings>
+	<!-- 
+	typeAliases : mapper.xml의 select 리턴 타입에 들어갈 클래스 경로를 설정
+	 -->
+	 <typeAliases>
+	 	<package name="edu.spring.ex03.domain" />
+	 </typeAliases>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
